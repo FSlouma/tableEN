@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 10px;
+            box-sizing: border-box;
+        }
+
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 14px;
+        }
+
+        table, th, td {
+            border: 1px solid black;
+        }
+
+        th, td {
+            padding: 12px;
+            text-align: center;
+        }
+
+        th {
+            background-color: #f2f2f2;
+            font-size: 16px;
+            font-weight: bold;
+        }
+
+        .blue {
+            background-color: #dbe8f5;
+        }
+
+        .green {
+            background-color: #d3eadd;
+        }
+
+        .category {
+            text-align: left;
+            font-weight: bold;
+        }
+
+        .long-text {
+            text-align: left;
+            padding-left: 10px;
+            line-height: 1.5;
+        }
+
+        .important-text {
+            color: red;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            margin: 15px 0;
+        }
+
+        .header-text {
+            color: blue;
+            font-size: 24px;
+            font-weight: bold;
+            text-align: center;
+            margin-top: 15px;
+        }
+
+        .second-table {
+            width: 100%;
+            max-width: 500px;
+            border-collapse: collapse;
+            margin: 15px auto; /* Centers the table */
+        }
+
+        .second-table td {
+            background-color: #d0e7c5;
+        }
+
+        .second-table td:first-child {
+            background-color: white;
+        }
+
+        /* Mobile responsiveness */
+        @media (max-width: 768px) {
+            table {
+                overflow-x: auto;
+                width: 100%;
+            }
+
+            th, td {
+                padding: 5px; /* Reduced padding */
+                font-size: 12px; /* Smaller text */
+            }
+
+            .important-text {
+                font-size: 14px;
+                margin: 10px 0;
+            }
+
+            .header-text {
+                font-size: 18px;
+                margin-top: 10px;
+            }
+
+            .second-table {
+                max-width: 100%;
+            }
+        }
+    </style>
+    <title>Participation Fees Table</title>
+</head>
+<body>
+
+<!-- First Table (Wrapped in Scrollable Container) -->
+<div class="table-container">
+    <table>
+        <thead>
+            <tr>
+                <th rowspan="2">Category of participation</th>
+                <th colspan="2">From inside Tunisia (TND)</th>
+                <th rowspan="2">Fees cover</th>
+            </tr>
+            <tr>
+                <th>1 night</th>
+                <th>2 nights</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td class="category">Academic</td>
+                <td class="blue">300</td>
+                <td class="green">600</td>
+                <td class="long-text">Accommodation (double occupancy) in the hotel (all-inclusive soft), additional lunch, coffee breaks, documentation, certificate of attendance, and hotel tax.</td>
+            </tr>
+            <tr>
+                <td class="category">Industry Participant</td>
+                <td class="blue">500</td>
+                <td class="green">700</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td class="category">Accompanying Person</td>
+                <td class="blue">170</td>
+                <td class="green">340</td>
+                <td class="long-text">Accommodation (double occupancy) in the hotel (all-inclusive soft).</td>
+            </tr>
+            <tr>
+                <td class="category">1 child (02-12 years)</td>
+                <td class="blue">85</td>
+                <td class="green">170</td>
+                <td class="long-text">Staying in parents’ room.</td>
+            </tr>
+            <tr>
+                <td class="category">Single room supplement</td>
+                <td class="blue">45</td>
+                <td class="green">90</td>
+                <td></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+<!-- Important Information -->
+<p class="important-text">
+    Online registration is open to individuals located in Tunisia. The cost is 100 dinars. <br>
+    Participation without lodging: The cost is 180 dinars/day.
+</p>
+
+<!-- Second Table (From outside Tunisia) -->
+<p class="header-text">From outside Tunisia</p>
+<div class="table-container">
+    <table class="second-table">
+        <tr>
+            <td>Academic</td>
+            <td>300 Euro</td>
+        </tr>
+        <tr>
+            <td>Accompanying Person</td>
+            <td>80 Euro/night</td>
+        </tr>
+        <tr>
+            <td>Online registration</td>
+            <td>50 Euro</td>
+        </tr>
+    </table>
+</div>
+
+</body>
+</html>
